@@ -3,7 +3,7 @@ from setuptools import find_packages, setup
 # Define the package setup configuration
 setup(
     name="gitlogviz",  # Name of the package
-    version="0.2",  # Version number
+    version="0.1.0",  # Version number
     packages=find_packages(),  # Automatically find packages in the project
     install_requires=[
         "matplotlib",  # Dependency on the matplotlib library
