@@ -15,10 +15,34 @@ pip install gitlogviz
 Once installed, you can use GitLogViz by running the `gitlogviz` command in your terminal. By default, it will display a visual representation of the last 10 commits. You can customize the number of commits displayed using the `--limit` option.
 
 ```bash
+# Display the latest 5 commits
 gitlogviz --limit 5
 ```
 
 This will show a graph of the last 5 commits.
+
+### Advanced Usage
+
+GitLogViz provides flexible options for visualizing commit history. The `--limit` option allows you to control the number of commits displayed in the graph. For example, to view the first 8 commits:
+
+```bash
+gitlogviz --limit 8
+```
+
+To show all commits, use:
+
+```bash
+gitlogviz --limit all
+```
+
+Additionally, you can use negative values to display commits relative to the latest, for instance:
+
+```bash
+# Display the first 3 commits
+gitlogviz --limit -3
+```
+
+Experiment with different values to tailor the visualization to your needs.
 
 ## Contributing
 
