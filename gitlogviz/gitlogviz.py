@@ -1,5 +1,6 @@
 import argparse
 import subprocess
+import sys
 import tkinter as tk
 from tkinter import Scrollbar, Text
 
@@ -74,6 +75,13 @@ def save_git_log_graph(commit_limit=10):
     # Display the commit information in the Text widget
     text_widget.insert(tk.END, "\n".join(commits))
     text_widget.config(state=tk.DISABLED)  # Disable text editing
+
+    def on_close():
+        root.destroy()  # Destroy the Tkinter window when closed
+        sys.exit()
+
+    # Set up a protocol to handle the window close event
+    root.protocol("WM_DELETE_WINDOW", on_close)
 
     # Run the Tkinter main loop
     root.mainloop()
